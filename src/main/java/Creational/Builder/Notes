@@ -1,0 +1,22 @@
+
+------------------Creational DP | Builder Design Pattern-----------------------
+
+----> Problem: Immutable Class-larla İş
+I              Immutable class (dəyişdirilə bilməyən sinif) obyektləri yaradıldıqdan sonra dəyişdirilə bilməz.
+               Yəni, belə bir sinifin obyektini yaratdığınız zaman onun bütün sahələrini (fields) təyin etməliyik,
+               çünki obyekt bir dəfə yaradıldıqdan sonra heç bir sahə dəyişdirilə bilməz. Əgər biz obyektin bütün
+               sahələrini bir anda bilməsək, bu, problem yarada bilər, çünki obyektin sahələrini sonradan təyin etmək mümkün olmur.
+
+----> Həlli:   Builder Pattern
+               Bu cür hallarda Builder Pattern kömək edə bilər. Builder pattern vasitəsilə obyektin sahələrini addım-addım
+               təyin edə bilərik. Hər sahə üçün müvafiq məlumat olduqda həmin sahəni əlavə edirik və obyekt tam
+               formalaşdıqda onu qururuq (build edirik).
+
+
+Qeyd --> Builder DP Lombok kitabxanasında mövcud olan @Builder annotasiyasi ilə təmin edilə bilir.
+         Etməli olduğumuz şey sadəcə class-ı bu annotasiya ilə elan etməkdir.
+
+---> Tədbiqi :
+            Java : StringBuilder və StringBuffer, Stream.Builder
+            Lombok : @Builder
+            Spring : RestTemplate, WebClient, və UriComponentsBuilder
