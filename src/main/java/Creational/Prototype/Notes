@@ -1,0 +1,16 @@
+
+
+------------------Creational DP | Prototype Design Pattern-----------------------
+
+---> Adətən obyektin klonunun yaradılmasına ethiyac olduğunu hallarda tədbiq olunur
+---> Java-da klonlamanı yerinə yetirmək üçün adətən Cloneable marker interface-dən istifadə edilir.
+     Object class-nın clone metodu override olunur.(Numune var)
+---> 2 növü var :
+          -> shallow cloning (səthi)
+          -> deep cloning
+---> Deep Cloning : Class-da composition əlaqəsi olan zaman deep cloning istifadə olunur.
+                    Deep cloning, bir obyektin nüsxəsini yaratarkən, həmin obyektin daxilindəki
+                    bütün obyektlərin də nüsxələrinin yaradılmasını nəzərdə tutur.
+
+---> Tədbiqi :
+             Spring -> Bean scope type-lardan biridir.
