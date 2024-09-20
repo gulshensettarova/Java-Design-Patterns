@@ -1,0 +1,6 @@
+
+------------------Creational DP | Factory Design Pattern-----------------------
+
+
+----> Factory pattern obyektlərin yaradılması məsuliyyətini konkret siniflərdən ayıraraq bir factory sinifinə ötürür.
+      Bu, yaradılan obyektin tipinə qərar vermə prosesini mərkəzləşdirir və müəyyən bir obyektin yaradılma proessesini abstractlaşdırır.
