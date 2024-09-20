@@ -1,0 +1,8 @@
+----> Abstract Factory pattern, bir-birinə bağlı və ya asılı olan obyektləri yaratmaq üçün istifadə olunur.
+
+---->Nümunə-1 : İnformasiya Sistemləri
+     --> Layihə Təsviri: Bir bank sistemində fərqli müştəri növləri üçün hesablar yaradılır. Bu müştəri növləri fiziki şəxslər (şəxsi hesablar)
+                         və hüquqi şəxslər (korporativ hesablar) ola bilər.
+---->Nümunə-2 :  E-Ticarət Platformaları
+     --> Layihə Təsviri: E-ticarət sistemi, elektronika, geyim və ev əşyaları kimi müxtəlif məhsul kateqoriyalarını idarə edir.
+                        Hər kateqoriya üçün müxtəlif məhsul növləri mövcuddur.
