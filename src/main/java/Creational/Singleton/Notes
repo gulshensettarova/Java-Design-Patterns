@@ -1,0 +1,14 @@
+
+
+------------------Creational DP | Singleton Desing Pattern-----------------------
+
+---> Singleton DP -i class-dan 1 instance yaradılma tələbi qoyulduqda istifadə olunur.
+---> Yaradılan instance hər yerdən əlçatan olmalıdır.
+---> Obyektin yaradılmasına məhdudiyyət qoymaq üçün constructor metodu private elan edirik
+---> Obyektin yaradılma və əldə edilmə prossesini təmin etmək üçün static getInstance() metodu yaradılır.
+---> Multithreading zamanı bu metoda eyni anda çoxlu thread-in daxil olmasının qarşısını almaq üçün onu synchronized elan edirik
+---> 2 növü var :
+            ---> Eager singleton - instance class-in daxilində private olaraq yaradılır və getInstance() metodu ilə ona müraciət təmin olunur.
+            ---> Lazy singleton - instance yaradılma prossesi getInstance() metodunun daxilində baş verir.
+                                  Məqsəd instance-a ehtiyac yaranmadığı hallarda onun yaradılmasının qarşısının alınmasıdır.
+                                  Nə zaman bu metoda müraciət olunsa o zaman yaradılacaq.
