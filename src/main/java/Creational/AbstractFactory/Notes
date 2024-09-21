@@ -1,8 +1,46 @@
 ----> Abstract Factory pattern, bir-birinə bağlı və ya asılı olan obyektləri yaratmaq üçün istifadə olunur.
 
----->Nümunə-1 : İnformasiya Sistemləri
+---->Nümunə-1 : Bank sistemləri
      --> Layihə Təsviri: Bir bank sistemində fərqli müştəri növləri üçün hesablar yaradılır. Bu müştəri növləri fiziki şəxslər (şəxsi hesablar)
                          və hüquqi şəxslər (korporativ hesablar) ola bilər.
+      İzah : Deməli bizdə 2 növ hesab var :
+             a) Şəxsi hesablar  (Invidual Account)
+             b) korporativ hesablar (Corporate Account)
+
+             Hər iki hesab sistem üzərində bu hesabatlar növlərini icra edə bilməlidir:
+             a) Hesabatın yadda saxlanılması (Saving)
+             b) Hesabatın yoxlanılmasl (Checking)
+
+             Addımlar :
+             1) İlk öncə Account deyə interface yaradılır hansıki bu interface özündə accountType()
+                deyə bir metod saxlayır.
+             2) Daha sonra yuxarda sadalanan hər iki hesab növü üzrə 2 əməliyyatı təmin edə bilmək üçün
+                4 class yaradılacaq və bu class-lar Account interface-i implement edərək accountType() metodunu override edecekler.
+                class-lar :
+
+                a) CorporateSavingAccount
+                b) CorporateCheckingAccount
+                c) InvidualSavingAccount
+                d) InvidualCheckingAccount
+
+             3) İndi isə hər iki hesab növü üzrə factory class-larımızı yaradırıq:
+
+                a) CorporateAccountFactory
+                b) InvidualAccountFactory
+
+                Hesabatların yaradılma metodları bu class-da olacaq.
+
+
+
 ---->Nümunə-2 :  E-Ticarət Platformaları
      --> Layihə Təsviri: E-ticarət sistemi, elektronika, geyim və ev əşyaları kimi müxtəlif məhsul kateqoriyalarını idarə edir.
                         Hər kateqoriya üçün müxtəlif məhsul növləri mövcuddur.
+
+Qeyd: Abstract-da sadəcə məhsulun yaradılma prossesini abstractlaşdırılır (nümunə üçün məhsul deyirik ama başqa bir şey də ola bilər).
+      Adətən sadə funksionallıqlarda tədbiq olunur. Məsələn : Product - Category, Student - Group, Employee - profession və s.
+      Product-in hansi category-de olma prossesi abstract olur, eləcədə digər nümunələrdə.
+      Abstract-Factory-də isə bir-birilə əlaqəli olan Factory-lər çoxdur. Həm Factory-nin məhsulu yaratma prossesi,
+      Həm də məhsulu yaratmaq üçün hansı factory-nin seçiləcəyi prosses abstractlaşdırılır.
+      Daha mürəkkəb funksionallıqlarda tədbiq olunur. Məsələn : Product - Category - Marka, Student -Group - Profession, Employee - Profession - Team və s.
+
+      PS : ToDoList nümunəsi üzərindən hər iki DP müqayisə olunmuşdur.
