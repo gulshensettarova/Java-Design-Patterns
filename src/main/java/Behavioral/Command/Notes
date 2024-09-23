@@ -1,0 +1,5 @@
+Bir-birilə əlaqəli çoxlu metodlarımız var,
+ama bu metodların hər biri fərqli senarilərdə fərqli şəxslər tərəfindən fərqli işlər görür,
+və bu metodların adətən icrasıyla yanaşı geri alınma funksionallığı da olur. Məs:
+
+Nümunə-1 :
