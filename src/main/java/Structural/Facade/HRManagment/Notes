@@ -1,0 +1,2 @@
+HR  mütəxəssisi bir neçə fərqli sistemi ayrı-ayrılıqda idarə etməli olduğu üçün proses çətinləşir.
+Bunun üçün EmployeeManagementFacade sinifi yaradaq ki, bu mütəxəssislərə bütün xidmətləri bir interfeys vasitəsilə təqdim etsin.

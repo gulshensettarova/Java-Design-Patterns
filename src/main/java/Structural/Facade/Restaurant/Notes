@@ -1,0 +1,7 @@
+ Layihe bir nece alt-sistemden ibaret olduqda onlarin her birini idare etmek cetin olur.
+ Bu alt-sistemleri merkezden idare ede bilmek ucun onlari birlesdiren interface yaradilir.
+ Meselen restoran sistemi uzerinden bir numuneye baxaq.
+ 1. Musteri masa rezerv etdirir
+ 2. Yemek sifaris verilir
+ 3. Hesab odenilir
+ Bu 3 alt-sistemi birlikde idare ede bilmek ucun Facade DP istifade edilir.

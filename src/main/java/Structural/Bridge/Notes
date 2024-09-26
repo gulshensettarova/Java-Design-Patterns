@@ -1,3 +1,11 @@
+----Bridge dizayn pattern-i, bir sistemi iki fərqli hissəyə bölərək, bu hissələri müstəqil şəkildə inkişaf etdirməyə və dəyişdirməyə imkan verir.
+Bridge dizayn pattern-də sistemin bölünən iki hissəsi "nə edildiyi" və "necə edildiyi"
+əsasında müəyyən edilir. Yəni, bir hissə sistemi istifadə edənlərə hansı funksionallığın
+təqdim olunduğunu (nə edildiyini), digər hissə isə bu funksionallığın arxa planda necə həyata
+keçirildiyini (necə edildiyini) təyin edir. Bu iki hissəni ayırmaq, hər ikisini müstəqil
+olaraq dəyişdirməyə imkan verir.----
+
+
 Payment nümunəsi üzərində izahına baxaq:
 İstifadəçi ödənişi həm veb tədbiq həm də mobile tədbiq üzərində edə bilər.
 Eyni zamanda ödənişi etmək üçün müxtəlif ödəniş metodlarından istifadə edə bilər (PayPal, Bank Transfer, Credit)
@@ -8,4 +16,15 @@ Bu Səbəbdən də hər iki interface ayrı-ayrılıqda yaradılır (Abstract cl
 2.ApplicationType ucun abstract class yaradilir ve WebApplication ve MobileApplication class-lari bu abstract class-dan extend edir.
 3.PaymentType ve ApplicationType -i elaqelendirmek ucun ApplicationType abstract class-da
 pay() metodu yaradilir ve bu class-in icinde PaymentType obyekti ile composition elaqesi qurulur.
+
+
+"Nə edildiyi" (Abstraction):
+
+Payment: Ödəniş əməliyyatını həyata keçirir.
+WebPayment, MobilePayment: Bu siniflər veb və ya mobil cihazlardan ödəniş edilməsi üçün xüsusi konteksti idarə edir.
+Hər iki halda "nə edildiyi" eynidir — ödəniş həyata keçirilir, lakin fərqli mühitlərdə (veb və mobil).
+"Necə edildiyi" (Implementation):
+
+BankPayment, PaypalPayment: Ödənişin arxa planda necə icra olunmasını təyin edən hissədir.
+Bank və ya PayPal vasitəsilə ödəniş edilməsi fərqli implementasiyadır.
 
