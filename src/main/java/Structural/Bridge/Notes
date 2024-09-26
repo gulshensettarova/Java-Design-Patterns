@@ -1,0 +1,11 @@
+Payment nümunəsi üzərində izahına baxaq:
+İstifadəçi ödənişi həm veb tədbiq həm də mobile tədbiq üzərində edə bilər.
+Eyni zamanda ödənişi etmək üçün müxtəlif ödəniş metodlarından istifadə edə bilər (PayPal, Bank Transfer, Credit)
+Application növü və ödəniş növü bir-birindən asılı olmamamlıdır. Hər biri sərbəst formada genişlənə bilmə xüsusiyyətinə malik olmalıdır.
+Bu Səbəbdən də hər iki interface ayrı-ayrılıqda yaradılır (Abstract class-da ola bilər).
+
+1.PaymentType interface-i yaradilir (makePayment() metodu ile birlikde) ve odenis tipleri ile bagli class-lari bu interface-den implement edir
+2.ApplicationType ucun abstract class yaradilir ve WebApplication ve MobileApplication class-lari bu abstract class-dan extend edir.
+3.PaymentType ve ApplicationType -i elaqelendirmek ucun ApplicationType abstract class-da
+pay() metodu yaradilir ve bu class-in icinde PaymentType obyekti ile composition elaqesi qurulur.
+
